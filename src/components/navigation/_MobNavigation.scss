@@ -1,0 +1,33 @@
+@media screen and (max-width: 600px) {
+    .navigation {
+        position: relative;
+        .nav-options {
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                left: -120%;
+                top: 9vh;
+                .account-buttons {
+                    .sign-up {
+                        margin-top: 2rem;
+                    }
+                    .sign-in {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+            #check:checked ~ .nav-links {
+                left: 50%;
+                transform: translateX(-50%);
+                transition: left 0.5s ease-in-out;
+                background-color: #dedede2f;
+                width: 100vw;
+            }
+            .menu {
+                display: block;
+            }
+        }
+    }
+}

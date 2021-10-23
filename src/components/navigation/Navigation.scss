@@ -1,0 +1,54 @@
+@import "../../scss/variables";
+.navigation {
+    background-color: $nav_background;
+    height: 12vh;
+    .nav-options {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 8%;
+        .brand {
+            margin-top: 4.5vh;
+        }
+        #check {
+            display: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3vh;
+            .account-buttons {
+                .account-button {
+                    height: 2.5rem;
+                    width: 6rem;
+                    cursor: pointer;
+                    transition: width .5s;
+                    border-radius: .4rem;
+                    font-size: 1.1rem;
+                    &:hover {
+                        width: 6.3rem;
+                    }
+                }
+                .sign-up {
+                    color: $sign_up;
+                    border: 1px solid $sign_up;
+                }
+                .sign-in {
+                    color: $color_white;
+                    background-color: $sign_in;
+                    border: none;
+                }
+            }
+        }
+        .menu {
+            font-size: 1.8rem;
+            margin-top: 4vh;
+            display: none;
+            .menu-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Responsive -> mobile
+@import "./MobNavigation";
