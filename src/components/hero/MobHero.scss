@@ -1,0 +1,13 @@
+@media screen and (max-width: 850px) {
+    .hero {
+        flex-direction: column-reverse;
+        margin-left: 0;
+        .hero-image {
+            margin: 2rem auto;
+        }
+        .hero-message {
+            margin-top: -2rem;
+            margin-left: 8%;
+        }
+    }
+}

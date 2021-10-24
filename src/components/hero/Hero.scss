@@ -1,0 +1,32 @@
+@import "../../scss/variables";
+
+.hero {
+    margin-top: 2rem;
+    margin-left: 8%;
+    display: flex;
+    .hero-message {
+        margin-top: 7rem;
+        .headingOne {
+            color: $sign_up;
+            font-size: 2rem;
+        }
+        .headingTwo {
+            color: $colo_gray;
+            font-size: 2rem;
+        }
+        .subHeading {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: $colo_gray;
+        }
+        .cta {
+            .cta-button {
+                color: $sign_up;
+                border: 1px solid $sign_up;
+            }
+        }
+    }
+}
+
+// Responsive -> mobile
+@import "./MobHero.scss";
