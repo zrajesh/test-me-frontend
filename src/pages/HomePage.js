@@ -1,5 +1,6 @@
 // Import components
 import Hero from "../components/hero/Hero";
+import MidSection from "../components/midSection/MidSection";
 import Navigation from "../components/navigation/Navigation";
 
 const HomePage = () => {
@@ -7,6 +8,7 @@ const HomePage = () => {
         <div>
             <Navigation /> 
             <Hero />
+            <MidSection />
         </div>
     );
 };

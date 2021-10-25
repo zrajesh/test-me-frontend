@@ -1,0 +1,80 @@
+@import "../../scss/variables";
+
+.mid-section {
+    margin-top: 5rem;
+    position: relative;
+    // Top svg backround
+    .mid-section-top-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: 1;
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 72px;
+        }
+        
+        .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+    // Contents
+    .mid-contents {
+        background-color: $color_light_green;
+        display: flex;
+        gap: 2.5rem;
+        .mid-image-div {
+            margin-left: 4%;
+            margin-top: -2.4rem;
+            margin-bottom: 2.8rem;
+            z-index: 2;
+            .mid-image {
+                height: 27rem;
+                width: 25rem;
+            }
+        }
+        .mid-info {
+            margin-top: 4.5rem;
+            color: $color_white;
+            margin-right: 5%;
+            .subheading {
+                font-size: 1.7rem;
+            }
+            .sub-para {
+                font-size: 1.1rem;
+                margin-top: 1.3rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+    // Bottom svg background
+    .mid-section-bottom-svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50px;
+        }
+        
+        .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+    
+}
+
+// Responsive -> mobile
+@import "./MobMidSection";

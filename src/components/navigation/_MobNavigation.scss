@@ -22,7 +22,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 transition: left 0.5s ease-in-out;
-                background-color: #dedede2f;
+                background-color: $nav_mob_background;
                 width: 100vw;
             }
             .menu {

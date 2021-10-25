@@ -10,7 +10,7 @@ const Hero = () => {
     const {headingBold, headingLight, para, buttonText} = HeroList;
 
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="hero-message">
                 <h1 className="headingOne">{headingBold}</h1>
                 <p className="headingTwo">{headingLight}</p>
@@ -20,7 +20,7 @@ const Hero = () => {
             <div className="hero-image">
                 <HeadImage />
             </div>
-        </div>
+        </section>
     );
 };
 
