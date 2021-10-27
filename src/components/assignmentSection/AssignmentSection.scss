@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+
+.assignment-section {
+    margin-top: 2rem;
+    .assignment-head {
+        margin-left: 8%;
+        font-size: 1.1rem;
+        color: $color_light_green;
+        margin-bottom: 3rem;
+    }
+    .assignment-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}

@@ -7,7 +7,7 @@ import { HeroList } from "./HeroList";
 import "./Hero.scss";
 
 const Hero = () => {
-    const {headingBold, headingLight, para, buttonText} = HeroList;
+    const {headingBold, headingLight, para} = HeroList;
 
     return (
         <section className="hero">
@@ -15,7 +15,7 @@ const Hero = () => {
                 <h1 className="headingOne">{headingBold}</h1>
                 <p className="headingTwo">{headingLight}</p>
                 <p className="subHeading">{para}</p>
-                <CtaButton text={buttonText} />
+                <CtaButton CtaList={HeroList} />
             </div>
             <div className="hero-image">
                 <HeadImage />

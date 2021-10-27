@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+
+.card-container {
+    position: relative;
+    .card {
+        box-shadow: -0.1rem 0 0.1rem $color_grey, 0.1rem 0.1rem 0.3rem $color_grey;
+        border-radius: .4rem;
+        .card-text {
+            color: $card_color;
+            .card-head {
+                padding-top: .8rem;
+                margin-left: .8rem;
+            }
+        }
+        .card-image-div {
+            .card-image {
+                margin-top: 1rem;
+                width: 14rem;
+                height: 14rem;
+            }
+        }
+    }
+    .cta {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        .cta-button {
+            width: 8rem;
+            border: none;
+            background-color: $color_light_green;
+            color: $color_white;
+            &:hover {
+                width: 8.3rem;
+            }
+        }
+    }
+    &:hover {
+        .cta {
+            display: block;
+        }
+    }
+    .color-picker {
+        margin-top: 1rem;
+        .color-btn {
+            width: 12rem;
+            height: 3rem;
+            border-radius: .4rem;
+        }
+    }
+}

@@ -1,51 +1,75 @@
 @import "../../scss/variables";
-.navigation {
-    background-color: $nav_background;
-    height: 12vh;
-    .nav-options {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 8%;
-        .brand {
-            margin-top: 4.5vh;
-        }
-        #check {
-            display: none;
-        }
-        .nav-links {
+
+.navigation-wrap {
+    position: relative;
+    .navigation {
+        background-color: $nav_background;
+        height: 16vh;
+        .nav-options {
             display: flex;
-            gap: 1rem;
-            margin-top: 3vh;
-            .account-buttons {
-                .account-button {
-                    height: 2.5rem;
-                    width: 6rem;
-                    cursor: pointer;
-                    transition: width .5s ease-in-out;
-                    border-radius: .4rem;
-                    font-size: 1.1rem;
-                    &:hover {
-                        width: 6.3rem;
+            justify-content: space-between;
+            margin: 0 8%;
+            .brand {
+                margin-top: 4.5vh;
+            }
+            #check {
+                display: none;
+            }
+            .nav-links {
+                display: flex;
+                gap: 1rem;
+                margin-top: 3vh;
+                .account-buttons {
+                    .account-button {
+                        height: 2.5rem;
+                        width: 6rem;
+                        cursor: pointer;
+                        transition: width .5s ease-in-out;
+                        border-radius: .4rem;
+                        font-size: 1.1rem;
+                        &:hover {
+                            width: 6.3rem;
+                        }
+                    }
+                    .sign-up {
+                        color: $sign_up;
+                        border: 1px solid $sign_up;
+                    }
+                    .sign-in {
+                        color: $color_white;
+                        background-color: $sign_in;
+                        border: none;
                     }
                 }
-                .sign-up {
-                    color: $sign_up;
-                    border: 1px solid $sign_up;
-                }
-                .sign-in {
-                    color: $color_white;
-                    background-color: $sign_in;
-                    border: none;
+            }
+            .menu {
+                font-size: 1.8rem;
+                margin-top: 4vh;
+                display: none;
+                .menu-icon {
+                    cursor: pointer;
                 }
             }
         }
-        .menu {
-            font-size: 1.8rem;
-            margin-top: 4vh;
-            display: none;
-            .menu-icon {
-                cursor: pointer;
-            }
+    }
+    // SVG background
+    .navigation-svg-background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 21px;
+        }
+        
+        .shape-fill {
+            fill: $color_white;
         }
     }
 }
