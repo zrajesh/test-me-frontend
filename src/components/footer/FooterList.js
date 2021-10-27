@@ -1,7 +1,5 @@
 // Import components
 import {ReactComponent as Brand} from "../../assets/TestMe_logo.svg"
-import {ReactComponent as Master} from "../../assets/mastercard.svg"
-import {ReactComponent as Paypal} from "../../assets/Paypal.svg"
 
 export const TopFooter = [
     {
@@ -50,7 +48,7 @@ export const BottomFooter = [
 ];
 
 export const CashCards = [
-    {card: <Master />},
-    {card: <Paypal />},
+    {card: <i className="fab fa-cc-mastercard"></i>},
+    {card: <i className="fab fa-paypal"></i>},
     {card: <i className="fab fa-cc-visa"></i>}
 ]
