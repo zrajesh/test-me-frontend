@@ -1,0 +1,33 @@
+@media screen and (max-width: 830px) {
+    .footer-wrap {
+        height: 135vh;
+        .footer {
+            .top-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin: 2.5rem 8%;
+                .para {
+                    margin-top: 1rem;
+                }
+                .email {
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .bottom-footer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2.5rem;
+            .bottom-contents {
+                margin: -1.5rem 8%;
+                .footer-links {
+                    margin-top: .5rem;
+                    .footer-link {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
