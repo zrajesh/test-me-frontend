@@ -9,7 +9,7 @@ const AssignmentSection = () => {
     const {head} = AssignmentHead;
     
     return (
-        <section className="assignment-section">
+        <section className="assignment-section" id="assessmentId">
         <div className="assignment-head">
             <h2>{head}</h2>
         </div>

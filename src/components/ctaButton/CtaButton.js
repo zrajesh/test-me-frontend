@@ -10,7 +10,7 @@ const CtaButton = ({CtaList, history}) => {
         if (call === "cards") {
             let path = event.target.parentElement.parentElement.children[0].children[0].children[0].innerText;
             history.push(`/assessment/${path.toLowerCase()}`);
-        }
+        } else if (call === "hero") window.location.replace("#assessmentId");
     }
     
     return (

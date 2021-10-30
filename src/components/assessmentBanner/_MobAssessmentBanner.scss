@@ -1,0 +1,38 @@
+@media screen and (max-width: 850px) {
+    .assessmet-banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        .banner-text {
+            padding-top: 6%;
+            padding-bottom: 2rem;
+            margin-left: 0;
+        }
+        .banner-image {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .assessmet-banner {
+        .banner-text {
+            margin-left: 4%;
+        }
+        .banner-image {
+            .banner-image-svg {
+                width: 24rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .assessmet-banner {
+        .banner-image {
+            .banner-image-svg {
+                width: 15.5rem;
+                height: 10rem;
+            }
+        }
+    }
+}
