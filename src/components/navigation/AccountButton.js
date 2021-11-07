@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AccountButton = ({buttonData}) => {
-    const {text, toLink, btnClass} = buttonData;
+    const {text, btnClass} = buttonData;
     return (
         <div className="account-buttons">
             <Link 
