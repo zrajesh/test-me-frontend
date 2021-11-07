@@ -1,0 +1,113 @@
+@import "../../scss/variables";
+
+.score-board {
+    display: flex;
+    margin: 3rem 4%;
+    gap: 2rem;
+    .summary {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        min-width: 50vw;
+        .summary-head {
+            background-color: $nav_background;
+            text-align: center;
+            .head {
+                padding: 1rem 0;
+                font-size: 1.3rem;
+            }
+        }
+        .rateNo {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 5%;
+            font-size: 1.3rem;
+            background-color: #cde0fa;
+            border-radius: .3rem;
+            .total {
+                margin: .5rem 5%;
+                color: #283B75;
+            }
+        }
+        .rateCorrect {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 5%;
+            font-size: 1.3rem;
+            background-color: #FFEABE;
+            border-radius: .3rem;
+            .correct {
+                margin: .5rem 5%;
+                color: #FDB827;
+            }
+        }
+        .rateIncorrect {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 5%;
+            font-size: 1.3rem;
+            background-color: #FFF3F5;
+            border-radius: .3rem;
+            .incorrect {
+                margin: .5rem 5%;
+                color: #F3364C;
+            }
+        }
+        .total-score {
+            margin-left: 2rem;
+            font-size: 1.2rem;
+            padding-top: 1rem;
+        }
+        .rateTotal {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 5%;
+            font-size: 1.3rem;
+            background-color: #1A67DD;
+            border-radius: .3rem;
+            .total-content {
+                margin: .5rem 5%;
+                color: #FFF;
+            }
+        }
+    }
+    .summary-chart {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        min-width: 40vw;
+        .chart-head {
+            .head {
+                color: #283B75;
+                background-color: $nav_background;
+                text-align: center;
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+        }
+        .chart-details {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            .squareCorrect {
+                font-size: 1.4rem;
+                color: #28C8AB;
+            }
+            .squareInCorrect {
+                font-size: 1.4rem;
+                color: #F3364C;
+            }
+            .span {
+                margin-left: .4rem;
+                color: #575454;
+                font-size: 1rem;
+            }
+        }
+        .chart-display {
+            margin: 2rem 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .score-board {
+        flex-direction: column;
+    }
+}

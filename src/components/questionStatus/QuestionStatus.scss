@@ -1,0 +1,58 @@
+@import "../../scss/variables";
+
+.question-components {
+    display: flex;
+    justify-content: space-between;
+    .question-status {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        .status-head {
+            font-size: 1.5rem;
+            margin-top: .5rem;
+            text-align: center;
+            color: $prev;
+        }
+        .status-icon {
+            margin: 1rem 3%;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            .box-icon-ans, .box-icon-unans, .box-icon-marked {
+                margin-right: .2rem;
+            }
+            .box-icon-ans {
+                color: $color_light_green;
+            }
+            .box-icon-unans {
+                color: $hr;
+            }
+            .box-icon-marked {
+                color: $marked;
+            }
+        }
+        .status-hr {
+            border: 1px solid $hr;
+        }
+        .status-box-contain {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            .status-box {
+                font-size: 2.5rem;
+                color: $hr;
+            }
+        }
+        .cta {
+            text-align: center;
+            margin: 2rem 0;
+            .cta-button {
+                background-color: $color_light_green;
+                border: none;
+                color: $color_white;
+            }
+        }
+    }
+}
+
