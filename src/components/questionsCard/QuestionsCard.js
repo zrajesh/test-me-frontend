@@ -1,9 +1,9 @@
 // Imports
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import { getQuestions } from "../../redux/actions/questionAction";
-import { GeneralQuestions, MernQuestions, ProductQuestions, ServiceQuestions } from "../questions/Questions";
 import QuestionStatus from "../questionStatus/QuestionStatus";
 // Import list
 import { QuestionsCardList } from "./QuestionCardList";
@@ -19,13 +19,41 @@ const QuestionsCard = ({questions}) => {
     const [index, setIndex] = useState(0);
     const [check, setCheck] = useState(false);
     let [tempScore, setTempScore] = useState(0);
-    const {question, options, correct} = questions[index];
+    const {questionName, options, correct} = questions[index];
+
+    const fetchProduct = async () => {
+        const response =  await axios
+                .get("https://skilltest-backend.herokuapp.com/api/questions/618aac53ce2b33187481fdaf")
+                .catch(err => console.log("ERR: ", err))
+                dispatch(getQuestions(response.data))
+    }
+
+    const fetchService = async () => {
+        const response =  await axios
+                .get("https://skilltest-backend.herokuapp.com/api/questions/618aac5ace2b33187481fdb1")
+                .catch(err => console.log("ERR: ", err))
+                dispatch(getQuestions(response.data))
+    }
+
+    const fetchGeneral = async () => {
+        const response =  await axios
+                .get("https://skilltest-backend.herokuapp.com/api/questions/618aac62ce2b33187481fdb3")
+                .catch(err => console.log("ERR: ", err))
+                dispatch(getQuestions(response.data))
+    }
+
+    const fetchMern = async () => {
+        const response =  await axios
+                .get("https://skilltest-backend.herokuapp.com/api/questions/618aac44ce2b33187481fdad")
+                .catch(err => console.log("ERR: ", err))
+                dispatch(getQuestions(response.data))
+    }
 
     useEffect(() => {
-        if (title === "product") dispatch(getQuestions(ProductQuestions));
-        else if (title === "service") dispatch(getQuestions(ServiceQuestions));
-        else if (title === "general") dispatch(getQuestions(GeneralQuestions));
-        else dispatch(getQuestions(MernQuestions));
+        if (title === "product") fetchProduct()
+        else if (title === "service") fetchService();
+        else if (title === "general") fetchGeneral();
+        else fetchMern();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch]);
 
@@ -93,7 +121,7 @@ const QuestionsCard = ({questions}) => {
                 </div>
             </div>
             <div className="question-display">
-                <p className="question">{question}</p>
+                <p className="question">{questionName}</p>
                 <div className="options">
                     {
                         options.map((option, index) => (
